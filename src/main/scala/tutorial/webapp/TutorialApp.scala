@@ -3,7 +3,7 @@ package tutorial.webapp
 import scala.scalajs.js.JSApp
 import org.scalajs.dom
 import dom.document
-import keycloak.Keycloak
+import keycloak.keyCloak
 
 object TutorialApp extends JSApp {
   def main(): Unit = {
@@ -18,7 +18,7 @@ object TutorialApp extends JSApp {
         "secret"-> "ca8b4ea7-2a69-4510-ab20-1b98bfff6f58"
         )
       )
-    var keycloak = new Keycloak(keycloakConfig)
+    var keycloak = keyCloak(keycloakConfig)
     keycloak.init(Map(
       "onLoad" -> "login-required"
     )).success({
